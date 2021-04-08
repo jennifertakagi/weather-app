@@ -1,0 +1,10 @@
+app-root {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 3rem;
+}

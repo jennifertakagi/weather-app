@@ -1,0 +1,12 @@
+.header {
+  background-color: var(--primary);
+  padding: 1em 1em 1em 1em;
+  color: var(--white);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.header > h1 {
+  text-align: center;
+  font-size: 1.8rem;
+}

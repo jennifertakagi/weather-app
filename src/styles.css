@@ -6,8 +6,8 @@
 
 :root {
   --background: #dfe6e9;
-  --title: #74b9ff;
-  --title-highlight: #0984e3;
+  --primary: #0984e3;
+  --secondary: #fab1a0;
   --text: #2d3436;
   --white: #fff;
 }

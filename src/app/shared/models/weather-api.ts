@@ -16,9 +16,6 @@ export interface IRequestWeather {
   wind: {
     speed: 1.5,
   };
-  clouds: {
-    all: 1
-  };
   id: number;
   name: string;
 }             

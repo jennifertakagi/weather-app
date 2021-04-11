@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title: string = 'How\'s the Weather?';
-  public citiesToShow: String[] = ['Amsterdam', 'London', 'Krakow', 'Brussels', 'Bristol'];
+  public title = 'How\'s the Weather?';
+  public citiesToShow: string[] = ['Amsterdam', 'London', 'Krakow', 'Brussels', 'Bristol'];
 
   constructor() {}
 }

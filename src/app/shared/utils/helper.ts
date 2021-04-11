@@ -6,10 +6,10 @@ import { IWeatherHourly } from '../models/weather-hourly';
 
 /**
  * Clean current request weather data, return only the necessary properties
- * @param weather {IRequestWeather}
- * @returns {IWeather} the current weather
+ * @param weather - full weather object from A{PI
+ * @returns the current weather
  */
-function cleanCurrentWeatherData (weather: IRequestWeather): IWeather{
+function cleanCurrentWeatherData(weather: IRequestWeather): IWeather {
   return {
     id: weather.id,
     icon: `http://openweathermap.org/img/w/${weather.weather?.[0]?.icon}.png`,
@@ -25,10 +25,10 @@ function cleanCurrentWeatherData (weather: IRequestWeather): IWeather{
 
 /**
  * Clean hourly request weather data, return only the necessary properties
- * @param weather {IRequestWeatherHourly}
- * @returns {IWeatherHourly[]} a list of hourly weather 
+ * @param weather - full weather object from A{PI
+ * @returns a list of hourly weather
  */
-function cleanHourlyWeatherData (weather: IRequestWeatherHourly): IWeatherHourly[]{
+function cleanHourlyWeatherData(weather: IRequestWeatherHourly): IWeatherHourly[] {
   return weather.hourly
     .slice(0, 3)
     .map(w => ({
@@ -42,13 +42,13 @@ function cleanHourlyWeatherData (weather: IRequestWeatherHourly): IWeatherHourly
 
 /**
  * Converts the UNIX time on a string hour
- * @param time {number} time on UNIX format
- * @returns {string} hour as a string (AM/PM)
+ * @param time time on UNIX format
+ * @returns hour as a string (AM/PM)
  */
 function convertHour(time: number): string {
   const milliseconds = time * 1000;
   const dateObject = new Date(milliseconds);
-  const hourAsString = dateObject.toLocaleString("en-US", {hour: "numeric"});
+  const hourAsString = dateObject.toLocaleString('en-US', {hour: 'numeric'});
 
   return hourAsString;
 }
@@ -56,4 +56,4 @@ function convertHour(time: number): string {
 export {
   cleanCurrentWeatherData,
   cleanHourlyWeatherData
-}
+};

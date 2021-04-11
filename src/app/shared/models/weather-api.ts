@@ -18,4 +18,4 @@ export interface IRequestWeather {
   };
   id: number;
   name: string;
-}             
+}

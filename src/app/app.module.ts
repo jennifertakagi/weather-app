@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './weather/header/header.component';
 import { WeatherContainer } from './weather/weatherContainer/weatherContainer.component';
+import { WeatherCard } from './weather/weatherCard/weatherCard.component';
+import { WeatherHourly } from './weather/weatherHourly/weatherHourly.component';
+
 import { WeatherService } from './shared/services/weather.service';
 
 @NgModule({
@@ -12,9 +16,12 @@ import { WeatherService } from './shared/services/weather.service';
     AppComponent,
     HeaderComponent,
     WeatherContainer,
+    WeatherCard,
+    WeatherHourly
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [WeatherService],

@@ -1,0 +1,22 @@
+.weather-container {
+  display: block;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.3rem 1rem;
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+  background: var(--secondary);
+}
+
+@media (min-width: 768px) {
+  div {
+    height: 100%;
+  }
+  
+  .weather-container {
+    display: block;
+    height: 100%;
+    margin: 0 0.5rem;
+    padding: 4rem 2rem;
+  }
+}

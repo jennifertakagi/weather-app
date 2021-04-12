@@ -1,0 +1,12 @@
+<ng-container>
+  <p class="weather-time">{{weatherHourly?.time}}</p>
+  <img class="weather-icon" src={{weatherHourly?.icon}} alt={{weatherHourly?.weatherTitle}}>
+  <p>
+    <img src="../../../assets/icons/thermometer.png" alt={{weatherHourly?.temperature}}>
+    <span>{{weatherHourly?.temperature}}</span>
+  </p>
+  <p>
+    <img src="../../../assets/icons/wind.png" alt={{weatherHourly?.windSpeed}}>
+    <span>{{weatherHourly?.windSpeed}}</span>
+  </p>
+</ng-container>

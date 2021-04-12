@@ -1,0 +1,33 @@
+.weather-time {
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 0.9rem;
+  display: flex;
+}
+
+.weather-icon {
+  width: 50% !important;
+  margin: 0 auto;
+}
+
+p img {
+  width: 17% !important;
+}
+
+p span {
+  width: 100px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1rem;
+  }
+
+  p img {
+    width: 20% !important;
+  }
+}

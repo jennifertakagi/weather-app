@@ -17,6 +17,7 @@ function cleanCurrentWeatherData(weather: IRequestWeather): IWeather {
     latitude: weather.coord?.lat,
     longitude: weather.coord?.lon,
     temperature: `${weather.main?.temp} F`,
+    time: convertHour(weather.dt),
     weatherSubtitle: weather.weather?.[0]?.description,
     weatherTitle: weather.weather?.[0]?.main,
     windSpeed: `${weather.wind?.speed} mph`,
@@ -30,7 +31,7 @@ function cleanCurrentWeatherData(weather: IRequestWeather): IWeather {
  */
 function cleanHourlyWeatherData(weather: IRequestWeatherHourly): IWeatherHourly[] {
   return weather.hourly
-    .slice(0, 3)
+    .slice(1, 24)
     .map(w => ({
       icon: `http://openweathermap.org/img/w/${w.weather?.[0]?.icon}.png`,
       temperature: `${w.temp} F`,

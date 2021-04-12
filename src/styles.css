@@ -32,8 +32,22 @@ button {
   cursor: pointer;
 }
 
+.carousel-cells {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-container {
+  height: 150px !important;
+}
+
 @media (min-width: 768px) {
   html, body, #root {
     overflow: hidden;
+  }
+
+  .carousel-container {
+    height: 100%;
   }
 }

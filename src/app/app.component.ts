@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'How\'s the Weather?';
-  public citiesToShow: string[] = ['Amsterdam', 'London', 'Krakow', 'Brussels', 'Bristol'];
+  public citiesToShow: string[] = ['Amsterdam', 'Bristol', 'Brussels', 'Krakow', 'London'];
 
   constructor() {}
 }

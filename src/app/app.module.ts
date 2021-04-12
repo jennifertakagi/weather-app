@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './weather/header/header.component';
@@ -17,12 +18,13 @@ import { WeatherService } from './shared/services/weather.service';
     HeaderComponent,
     WeatherContainerComponent,
     WeatherCardComponent,
-    WeatherHourlyComponent
+    WeatherHourlyComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    IvyCarouselModule,
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]

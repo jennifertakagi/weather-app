@@ -3,6 +3,7 @@ export interface IRequestWeather {
     lon: number,
     lat: number,
   };
+  dt: number;
   weather: [
     {
       main: string,

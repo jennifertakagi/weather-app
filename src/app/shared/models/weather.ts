@@ -5,6 +5,7 @@ export interface IWeather {
   latitude: number;
   longitude: number;
   temperature: string;
+  time: string;
   weatherSubtitle: string;
   weatherTitle: string;
   windSpeed: string;

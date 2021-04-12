@@ -1,0 +1,42 @@
+<div class="weather-card">
+  <div class="weather-main">
+    <p>{{weather?.time}}</p>
+    <img src={{weather?.icon}} alt={{weather?.weatherTitle}}>
+    <h3>{{weather?.cityName | uppercase}}</h3>
+    <p class="weather-title">{{weather?.weatherTitle}} | {{weather?.weatherSubtitle}}</p>
+  </div>
+  <div class="weather-summary">
+    <p>
+      <img src="../../../assets/icons/thermometer.png" alt={{weather?.temperature}}>
+      {{weather?.temperature}}
+    </p>
+    <p>
+      <img src="../../../assets/icons/wind.png" alt={{weather?.windSpeed}}>
+      {{weather?.windSpeed}}
+    </p>
+    <div>
+      <button
+        (click)="searchWeatherHourly()"
+      >
+        {{ showingHourly ? '- hrs' : '+ hrs' }}
+      </button>
+    </div>
+  </div>
+</div>
+<div class="loading-container" *ngIf="isLoading">
+  <img src="../../../assets/icons/loading.gif" alt="Loading">    
+</div>
+<div
+  class="weather-hourly"
+  [@openClose]="showingHourly ? 'open' : 'closed'"
+>
+  <carousel
+    [arrows]="false"
+    [arrowsOutside]="false"
+  >
+    <ng-container *ngFor="let weatherHourly of weatherHourlyData">
+      <app-weather-hourly class="carousel-cell" [weatherHourly]="weatherHourly"></app-weather-hourly>
+    </ng-container>
+  </carousel>
+</div>
+

@@ -5,9 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './weather/header/header.component';
-import { WeatherContainer } from './weather/weatherContainer/weatherContainer.component';
-import { WeatherCard } from './weather/weatherCard/weatherCard.component';
-import { WeatherHourly } from './weather/weatherHourly/weatherHourly.component';
+import { WeatherContainerComponent } from './weather/weatherContainer/weatherContainer.component';
+import { WeatherCardComponent } from './weather/weatherCard/weatherCard.component';
+import { WeatherHourlyComponent } from './weather/weatherHourly/weatherHourly.component';
 
 import { WeatherService } from './shared/services/weather.service';
 
@@ -15,9 +15,9 @@ import { WeatherService } from './shared/services/weather.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    WeatherContainer,
-    WeatherCard,
-    WeatherHourly
+    WeatherContainerComponent,
+    WeatherCardComponent,
+    WeatherHourlyComponent
   ],
   imports: [
     BrowserModule,

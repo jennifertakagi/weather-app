@@ -1,12 +1,12 @@
-import { IRequestWeather } from '../models/weather-api';
-
 export interface IRequestWeatherHourly {
-  hourly: [
-    {
-      dt: number,
-      temp: string,
-      weather: IRequestWeather,
-      wind_speed: string,
-    }
-  ];
+  hourly: {
+    dt: number,
+    temp: number,
+    weather: {
+      main: string,
+      description: string,
+      icon: string,
+    }[];
+    wind_speed: number,
+  }[];
 }

@@ -4,18 +4,16 @@ export interface IRequestWeather {
     lat: number,
   };
   dt: number;
-  weather: [
-    {
+  weather: {
       main: string,
       description: string,
       icon: string,
-    }
-  ];
+  }[];
   main: {
     temp: number
   };
   wind: {
-    speed: 1.5,
+    speed: number,
   };
   id: number;
   name: string;

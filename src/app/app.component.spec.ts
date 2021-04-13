@@ -16,16 +16,15 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'weather-app'`, () => {
+  it(`should have as title 'How's the Weather?'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('weather-app');
+    expect(app.title).toEqual('How\'s the Weather?');
   });
 
-  it('should render title', () => {
+  it(`should have cities to show as a list`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('weather-app app is running!');
+    const app = fixture.componentInstance;
+    expect(app.citiesToShow).toEqual(['Amsterdam', 'Bristol', 'Brussels', 'Krakow', 'London']);
   });
 });

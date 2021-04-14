@@ -10,7 +10,7 @@ import { mockWeather } from '../mocks/mockWeather';
 import { WeatherService } from './weather.service';
 
 describe('WeatherService', () => {
-  const API_KEY = environment.apiKey;
+  const API_KEY = environment.API_KEY;
   let service: WeatherService;
   let httpTestingController: HttpTestingController;
 

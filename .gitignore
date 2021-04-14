@@ -1,3 +1,4 @@
 node_modules
-environment.ts
+environments
+.env
 coverage

@@ -21,8 +21,8 @@
 * [Installation](#construction_worker-installation)
 * [Getting Started](#runner-getting-started)
 * [FAQ](#postbox-faq)
+* [Ideas to version 2.0](#dart-ideias-to-next-version)
 * [Found a bug? Missing a specific feature?](#bug-issues)
-* [Contributing](#tada-contributing)
 * [License](#closed_book-license)
 
 <br />
@@ -34,18 +34,20 @@
 * Shows the current weather of each city, with the information about: city's name, main weather, weather description, average temperature, wind speed and the current hour
 * Shows the next 24 hours at a click
 
+
 # :framed_picture: UI Documentation
 This project has a UI Documentation of reusable components, allowing to test them individually.
 
 * Desktop version
 <p align="left">
-   <img src="docs/hows-weather-desktop.png" />
+   <img src="docs/hows-weather-desktop.png"/>
 </p>
 
 * Mobile version
 <p align="left">
-   <img src="docs/hows-weather-mobile.png" />
+   <img src="docs/hows-weather-mobile.png" width="250"/>
 </p>
+
 
 # :construction_worker: Installation
 
@@ -75,6 +77,7 @@ Run the following command in root folder to run all the unit tests on the applic
 
 ```yarn test | test:coverage```
 
+
 # :postbox: Faq
 
 **Question:** What are the technologies used in this project?
@@ -85,10 +88,11 @@ Run the following command in root folder to run all the unit tests on the applic
 
 **Answer:** In the first version it has 82,8% of unit tests coverage.
 <p align="left">
-   <img src="docs/coverage.png" />
+   <img src="docs/test-coverage.png" />
 </p>
 
-# :dart: Ideas to version 2.0
+
+# :dart: Ideas to next version
 
 The project plan to the next version includes:
 - To be able to search a city weather by an input 🚀
@@ -98,9 +102,11 @@ The project plan to the next version includes:
 - To add E2E test 🚀
 - To create an own carousel component and remove this dependency
 
+
 # :bug: Issues
 
 Feel free to **file a new issue** with a respective title and description on the [How's the weather?](https://github.com/jennifertakagi/weather-app/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/jennifertakagi/weather-app/blob/master/CONTRIBUTING.md) to find out about the coding standards.
+
 
 # :closed_book: License
 

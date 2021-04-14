@@ -37,7 +37,7 @@ describe('WeatherService', () => {
       expect(city).not.toBe(null);
     });
 
-    const req = httpTestingController.expectOne(`http://api.openweathermap.org/data/2.5/weather?q=London&unit=imperial&appid=${API_KEY}`);
+    const req = httpTestingController.expectOne(`https://api.openweathermap.org/data/2.5/weather?q=London&unit=imperial&appid=${API_KEY}`);
     expect(req.request.method).toEqual('GET');
     req.flush(mockWeather);
   });
@@ -47,7 +47,7 @@ describe('WeatherService', () => {
       expect(hourly).not.toBe(null);
     });
 
-    const req = httpTestingController.expectOne(`http://api.openweathermap.org/data/2.5/onecall?lat=12&lon=14&exclude=current,minutely,daily,alerts&unit=imperial&appid=${API_KEY}`);
+    const req = httpTestingController.expectOne(`https://api.openweathermap.org/data/2.5/onecall?lat=12&lon=14&exclude=current,minutely,daily,alerts&unit=imperial&appid=${API_KEY}`);
     expect(req.request.method).toEqual('GET');
     req.flush(mockWeather);
   });

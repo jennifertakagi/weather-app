@@ -2,7 +2,7 @@ import { IWeather } from '../models/weather';
 
 export const mockWeather: IWeather = {
   id: 1,
-  icon: 'http://openweathermap.org/img/w/__ICON__.png',
+  icon: 'https://openweathermap.org/img/w/__ICON__.png',
   cityName: '__NAME__',
   latitude: 2,
   longitude: 1,

@@ -17,7 +17,7 @@ import {cleanCurrentWeatherData, cleanHourlyWeatherData} from '../utils/helper';
   providedIn: 'root'
 })
 export class WeatherService {
-  private URL = 'http://api.openweathermap.org/data/2.5';
+  private URL = 'https://api.openweathermap.org/data/2.5';
   private API_KEY = environment.API_KEY;
 
   constructor(private httpClient: HttpClient) { }

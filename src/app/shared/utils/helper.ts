@@ -11,7 +11,7 @@ import { IWeatherHourly } from '../models/weather-hourly';
  */
 function cleanCurrentWeatherData(weather: IRequestWeather): IWeather {
   const icon = weather.weather?.[0]?.icon
-    ? `http://openweathermap.org/img/w/${weather.weather?.[0]?.icon}.png`
+    ? `https://openweathermap.org/img/w/${weather.weather?.[0]?.icon}.png`
     : '../../../assets/icons/no-icon.png';
   const temperature = weather.main?.temp ? `${weather.main?.temp} F` : undefined;
   const windSpeed = weather.wind?.speed ? `${weather.wind?.speed} mph` : undefined;
@@ -40,7 +40,7 @@ function cleanHourlyWeatherData(weather: IRequestWeatherHourly): IWeatherHourly[
     .slice(1, 24)
     .map(w => {
       const icon = w.weather?.[0]?.icon
-        ? `http://openweathermap.org/img/w/${w.weather?.[0]?.icon}.png`
+        ? `https://openweathermap.org/img/w/${w.weather?.[0]?.icon}.png`
         : '../../../assets/icons/no-icon.png';
       const temperature = w.temp ? `${w.temp} F` : undefined;
       const windSpeed = w.wind_speed ? `${w.wind_speed} mph` : undefined;

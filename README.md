@@ -4,7 +4,7 @@
 
 # How's the weather?
 
-> Check it out the current and the next 24 hours weather of 5 European cities!
+> Check it out the current and the next 24 hours weather of 5 European cities! Available on: https://weather-app26.vercel.app/
 
 [![Author](https://img.shields.io/badge/author-jennifertakagi-ff9000?style=flat-square)](https://github.com/jennifertakagi)
 [![Languages](https://img.shields.io/github/languages/count/jennifertakagi/weather-app?color=%23ff9000&style=flat-square)](#)

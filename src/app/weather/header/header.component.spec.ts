@@ -16,7 +16,7 @@ describe('HeaderComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
-    component.title = 'TODO APP';
+    component.title = 'How\'s the Weather?';
     fixture.detectChanges();
   });
 
@@ -27,6 +27,6 @@ describe('HeaderComponent', () => {
   it('should render title in a h1 tag', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent)
-      .toContain('TODO APP');
+      .toContain('How\'s the Weather?');
   });
 });

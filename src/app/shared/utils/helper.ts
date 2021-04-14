@@ -10,17 +10,23 @@ import { IWeatherHourly } from '../models/weather-hourly';
  * @returns the current weather
  */
 function cleanCurrentWeatherData(weather: IRequestWeather): IWeather {
+  const icon = weather.weather?.[0]?.icon
+    ? `http://openweathermap.org/img/w/${weather.weather?.[0]?.icon}.png`
+    : '../../../assets/icons/no-icon.png';
+  const temperature = weather.main?.temp ? `${weather.main?.temp} F` : undefined;
+  const windSpeed = weather.wind?.speed ? `${weather.wind?.speed} mph` : undefined;
+
   return {
     id: weather.id,
-    icon: `http://openweathermap.org/img/w/${weather.weather?.[0]?.icon}.png`,
+    icon,
     cityName: weather.name,
     latitude: weather.coord?.lat,
     longitude: weather.coord?.lon,
-    temperature: `${weather.main?.temp} F`,
+    temperature,
     time: convertHour(weather.dt),
     weatherSubtitle: weather.weather?.[0]?.description,
     weatherTitle: weather.weather?.[0]?.main,
-    windSpeed: `${weather.wind?.speed} mph`,
+    windSpeed,
   };
 }
 
@@ -30,15 +36,23 @@ function cleanCurrentWeatherData(weather: IRequestWeather): IWeather {
  * @returns a list of hourly weather
  */
 function cleanHourlyWeatherData(weather: IRequestWeatherHourly): IWeatherHourly[] {
-  return weather.hourly
+  return (weather.hourly || [])
     .slice(1, 24)
-    .map(w => ({
-      icon: `http://openweathermap.org/img/w/${w.weather?.[0]?.icon}.png`,
-      temperature: `${w.temp} F`,
-      time: convertHour(w.dt),
-      weatherTitle: w.weather?.[0]?.main,
-      windSpeed: `${w.wind_speed} mph`,
-    }));
+    .map(w => {
+      const icon = w.weather?.[0]?.icon
+        ? `http://openweathermap.org/img/w/${w.weather?.[0]?.icon}.png`
+        : '../../../assets/icons/no-icon.png';
+      const temperature = w.temp ? `${w.temp} F` : undefined;
+      const windSpeed = w.wind_speed ? `${w.wind_speed} mph` : undefined;
+
+      return {
+        icon,
+        temperature,
+        time: convertHour(w.dt),
+        weatherTitle: w.weather?.[0]?.main,
+        windSpeed,
+      };
+    });
 }
 
 /**
@@ -46,7 +60,7 @@ function cleanHourlyWeatherData(weather: IRequestWeatherHourly): IWeatherHourly[
  * @param time time on UNIX format
  * @returns hour as a string (AM/PM)
  */
-function convertHour(time: number): string {
+function convertHour(time: number = 0): string {
   const milliseconds = time * 1000;
   const dateObject = new Date(milliseconds);
   const hourAsString = dateObject.toLocaleString('en-US', {hour: 'numeric'});

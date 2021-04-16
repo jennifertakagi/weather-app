@@ -34,7 +34,7 @@
     [arrows]="false"
     [arrowsOutside]="false"
   >
-    <ng-container *ngFor="let weatherHourly of weatherHourlyData">
+    <ng-container *ngFor="let weatherHourly of weatherHourlyData; trackBy: trackByFn">
       <app-weather-hourly class="carousel-cell" [weatherHourly]="weatherHourly"></app-weather-hourly>
     </ng-container>
   </carousel>

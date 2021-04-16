@@ -25,4 +25,8 @@ export class WeatherContainerComponent implements OnInit {
       });
     }
   }
+
+  public trackByFn(index, weather) {    
+    return weather.id;
+  }
 }

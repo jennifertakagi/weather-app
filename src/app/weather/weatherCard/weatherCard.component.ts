@@ -56,4 +56,8 @@ export class WeatherCardComponent implements OnInit {
       this.toggleHourlyPanel();
     });
   }
+
+  public trackByFn(index, weatherHourly) {    
+    return weatherHourly.id;
+  }
 }

@@ -46,6 +46,7 @@ function cleanHourlyWeatherData(weather: IRequestWeatherHourly): IWeatherHourly[
       const windSpeed = w.wind_speed ? `${w.wind_speed} mph` : undefined;
 
       return {
+        id: w.weather?.[0]?.id,
         icon,
         temperature,
         time: convertHour(w.dt),
